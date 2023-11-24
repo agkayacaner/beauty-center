@@ -64,6 +64,10 @@ export function CreateAppointmentForm() {
     e.preventDefault();
     console.log({ date, customer, service });
     toast.success("Randevu oluşturuldu.");
+
+    setTimeout(() => {
+      location.reload();
+    }, 2000);
   };
 
   return (

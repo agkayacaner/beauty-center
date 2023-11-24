@@ -8,29 +8,22 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { CalendarDays, User2, Users2 } from "lucide-react";
-import { Metadata } from "next";
 import { RecentAppointments } from "./_components/recent-appointments";
 import { Overview } from "./_components/overview";
-
-export const metadata: Metadata = {
-  title: "Dashboard",
-  description: "Example dashboard app built using the components.",
-};
 
 export default function Dashboard() {
   return (
     <div className="space-y-5">
-      <div className="flex items-center justify-between space-y-2">
+      <div className="md:flex items-center md:justify-between space-y-2">
         <h2 className="text-3xl font-bold tracking-tight">Genel Görünüm</h2>
-        {/* ToDay Date TR DD.MMMM.YYYY */}
         <div className="flex items-center justify-between space-y-2">
-          <h2 className="text-3xl font-bold tracking-tight">
+          <h4 className="text-xl tracking-tight">
             {new Date().toLocaleDateString("tr-TR", {
               day: "numeric",
               month: "long",
               year: "numeric",
             })}
-          </h2>
+          </h4>
         </div>
       </div>
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
